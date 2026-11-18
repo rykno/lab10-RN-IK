@@ -1,3 +1,4 @@
+import math
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -17,6 +18,10 @@ def divide(a,b):
     else:
         return b/a
 def logarithm(a,b):
-    return
+    if a<=0 or a == 1:
+        raise ValueError
+    if b <=0:
+        raise ValueError
+    return math.log(b,a)
 def exponent(a,b):
-    return a **b
+    return a ** b
