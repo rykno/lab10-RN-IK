@@ -19,9 +19,9 @@ def divide(a,b):
         return b/a
 def logarithm(a,b):
     if a<=0 or a == 1:
-        raise ValueError
+        raise ValueError ("base error")
     if b <=0:
-        raise ValueError
+        raise ValueError ("error")
     return math.log(b,a)
 def exponent(a,b):
     return a ** b
