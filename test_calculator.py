@@ -7,7 +7,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(5, add(5, 5), "Function error!" )
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(10, sub(15, 5), "Function error!")
+        self.assertEqual(10, subtract(15, 5), "Function error!")
 
 
     ######## Partner 1
