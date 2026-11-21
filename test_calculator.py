@@ -8,10 +8,14 @@ from calculator import *
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
     def test_add(self): # 3 assertions
-        self.assertEqual(5, add(5, 5))
+        self.assertEqual(10, add(5, 5))
+        self.assertEqual(1, add(-2,3))
+        self.assertEqual(add(0,5),5)
 
     def test_subtract(self): # 3 assertions
         self.assertEqual(10, subtract(15, 5))
+        self.assertEqual(6, subtract(10,4))
+        self.assertEqual(5, subtract(5,0))
 
 
     ######## Partner 1
@@ -28,20 +32,19 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
-        self.assertEqual("Cannot divide by zero", div(0, 5))
-        self.assertEqual(15, div(15,225))
+        with self.assertRaises(ValueError):
+            div(5,0)
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(2, logarithm(3, 9))
-        self.assertEqual("Invalid input for logarithm", logarithm(5, 0))
-        self.assertEqual("Invalid input for logarithm", logarithm(2, -2))
-
+        self.assertAlmostEqual(3, logarithm(2, 8))
+        self.assertAlmostEqual(2, logarithm(10,100))
+        self.assertAlmostEqual(3, logarithm(3,27))
 
 
     def test_log_invalid_base(self): # 1 assertion
-        self.assertEqual("Invalid input for logarithm", logarithm(0, 5))
-        self.assertEqual("Invalid input for logarithm", logarithm(-2, 5))
-        self.assertEqual("Invalid input for logarithm", logarithm(1, 5))
+        with self.assertRaises(ValueError):
+            logarithm(1, 5)
+    ########################
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         # call log function inside, example:
