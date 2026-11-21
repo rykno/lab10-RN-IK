@@ -28,16 +28,16 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(15, div(15,225), "Function error!")
 
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(2, log(3, 9), "Function error!")
-        self.assertEqual("Invalid input for logarithm", log(5, 0), "Function error!")
-        self.assertEqual("Invalid input for logarithm", log(2, -2), "Function error!")
+        self.assertEqual(2, logarithm(3, 9), "Function error!")
+        self.assertEqual("Invalid input for logarithm", logarithm(5, 0), "Function error!")
+        self.assertEqual("Invalid input for logarithm", logarithm(2, -2), "Function error!")
 
 
 
     def test_log_invalid_base(self): # 1 assertion
-        self.assertEqual("Invalid input for logarithm", log(0, 5), "Function error!")
-        self.assertEqual("Invalid input for logarithm", log(-2, 5), "Function error!")
-        self.assertEqual("Invalid input for logarithm", log(1, 5), "Function error!")
+        self.assertEqual("Invalid input for logarithm", logarithm(0, 5), "Function error!")
+        self.assertEqual("Invalid input for logarithm", logarithm(-2, 5), "Function error!")
+        self.assertEqual("Invalid input for logarithm", logarithm(1, 5), "Function error!")
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         # call log function inside, example:
