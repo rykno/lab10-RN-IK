@@ -8,7 +8,7 @@ from calculator import *
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
     def test_add(self): # 3 assertions
-        self.assertEqual(5, add(5, 5), "Function error!" )
+        self.assertEqual(10, add(5, 5), "Function error!" )
 
     def test_subtract(self): # 3 assertions
         self.assertEqual(10, subtract(15, 5), "Function error!")
@@ -17,7 +17,7 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 1
     def test_multiply(self): # 3 assertions
         self.assertEqual(mul(5,4),20)
-        self.assertEqual(mul(-2,3),6)
+        self.assertEqual(mul(-2,3),-6)
         self.assertEqual(mul(0,5),0)
 
     def test_divide(self): # 3 assertions
@@ -28,8 +28,7 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
-        self.assertEqual("Cannot divide by zero", div(0, 5),"Function error!")
-        self.assertEqual(15, div(15,225), "Function error!")
+        self.assertEqual("Cannot divide by zero", div(5, 0),"Function error!")
 
     def test_logarithm(self): # 3 assertions
         self.assertEqual(2, logarithm(3, 9), "Function error!")
