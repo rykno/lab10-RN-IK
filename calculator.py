@@ -23,15 +23,15 @@ def div(a,b):
         return b/a
 def logarithm(a,b):
     if a<=0 or a == 1:
-        raise ValueError ("base error")
+        raise ValueError
     if b <=0:
-        raise ValueError ("error")
+        raise ValueError
     return math.log(b,a)
 def exp(a,b):
     return a ** b
 def square_root(a):
     if a<0:
-        raise ValueError("cant be negative")
+        raise ValueError
     return a ** 0.5
 def hypotenuse(a,b):
     return math.hypot(a,b)
