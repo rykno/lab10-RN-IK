@@ -35,7 +35,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(2, logarithm(3, 9))
         self.assertEqual("Invalid input for logarithm", logarithm(5, 0))
         self.assertEqual("Invalid input for logarithm", logarithm(2, -2))
-
+        #yoooooo
 
 
     def test_log_invalid_base(self): # 1 assertion
