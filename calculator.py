@@ -1,3 +1,7 @@
+#https://github.com/rykno/lab10-RN-IK.git
+#Partner 1:Ryan Nguyen
+#Partner 2:Ishaan Krishna
+
 import math
 """
 calculator.py
