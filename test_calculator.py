@@ -28,7 +28,7 @@ class TestCalculator(unittest.TestCase):
 
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
-        self.assertEqual("Cannot divide by zero", div(0, 5)
+        self.assertEqual("Cannot divide by zero", div(0, 5))
         self.assertEqual(15, div(15,225))
 
     def test_logarithm(self): # 3 assertions
